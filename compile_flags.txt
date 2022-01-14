@@ -1,0 +1,11 @@
+-xc++
+-std=c++20
+-W
+-Wall
+-Wno-writable-strings
+-Wno-undefined-internal
+-Wno-unused
+-Wno-unused-parameter
+-IE:/Tools/GLFW/include/GLFW
+-IE:/Tools/VulkanSDK/Include
+-IE:/Tools/VulkanSDK/Third-Party/Include/glm
