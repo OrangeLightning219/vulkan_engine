@@ -12,7 +12,7 @@ set compiler_args=^
 -MTd ^
 -nologo ^
 -GR- ^
--EHa- ^
+-EHsc ^
 -Od -Oi ^
 -WX -W4 ^
 -FC ^

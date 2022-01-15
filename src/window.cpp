@@ -1,5 +1,6 @@
 #include "window.h"
 #include "glfw3.h"
+#include <stdio.h>
 
 void InitWindow( Window *window )
 {
@@ -14,4 +15,12 @@ void DestroyWindow( Window *window )
 {
     glfwDestroyWindow( window->window );
     glfwTerminate();
+}
+
+void CreateWindowSurface( Window *window, VkInstance instance, VkSurfaceKHR *surface )
+{
+    if ( glfwCreateWindowSurface( instance, window->window, 0, surface ) != VK_SUCCESS )
+    {
+        printf( "Failed to create window surface!\n" );
+    }
 }

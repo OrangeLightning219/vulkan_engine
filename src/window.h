@@ -13,3 +13,5 @@ struct Window
 
 void InitWindow( Window *window );
 void DestroyWindow( Window *window );
+
+void CreateWindowSurface( Window *window, VkInstance instance, VkSurfaceKHR *surface );
