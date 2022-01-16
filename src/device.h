@@ -1,7 +1,7 @@
 #pragma once
 
 #include "window.h"
-#include "utils.h"
+#include "utils/utils.h"
 #include <vector>
 
 struct Swap_Chain_Support_Details
