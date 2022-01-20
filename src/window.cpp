@@ -24,3 +24,8 @@ void CreateWindowSurface( Window *window, VkInstance instance, VkSurfaceKHR *sur
         printf( "Failed to create window surface!\n" );
     }
 }
+
+VkExtent2D GetWindowExtent( Window *window )
+{
+    return { ( u32 ) window->width, ( u32 ) window->height };
+}

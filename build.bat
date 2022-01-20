@@ -7,6 +7,7 @@ pushd engine
 if not exist shaders mkdir shaders
 popd
 
+:: @TODO: Disable exceptions (-EHa-) after removing std garbage
 
 set compiler_args=^
 -MTd ^
@@ -26,7 +27,8 @@ set compiler_args=^
 -Fe:vulkan_engine ^
 -IE:/Tools/glfw/include/GLFW ^
 -IE:/Tools/VulkanSDK/Include ^
--IE:/Tools/VulkanSDK/Third-Party/Include/glm
+-IE:/Tools/VulkanSDK/Third-Party/Include/glm ^
+-DSLOW
 
 set linker_args=^
 E:/Tools/glfw/build/src/Debug/glfw3.lib ^

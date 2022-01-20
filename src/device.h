@@ -2,7 +2,7 @@
 
 #include "window.h"
 #include "utils/utils.h"
-#include <vector>
+#include <vector> //@TODO: Remove std garbage
 
 struct Swap_Chain_Support_Details
 {
@@ -57,7 +57,7 @@ u32 FindMemoryType( Device *device, u32 typeFilter, VkMemoryPropertyFlags proper
 
 Queue_Family_Indices FindPhysicalQueueFamilies( Device *device );
 
-VkFormat FindSupportedFormat( const std::vector< VkFormat > &candidates, VkImageTiling tiling, VkFormatFeatureFlags features );
+VkFormat FindSupportedFormat( Device *device, std::vector< VkFormat > &candidates, VkImageTiling tiling, VkFormatFeatureFlags features );
 
 // Buffer Helper Functions
 void CreateBuffer( VkDeviceSize size, VkBufferUsageFlags usage, VkMemoryPropertyFlags properties,
